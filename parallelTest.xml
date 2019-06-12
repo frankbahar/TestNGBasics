@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Suite" parallel="tests">
+	<test name="TestSmartBears">
+		<parameter name="browser" value="firefox" />
+		<parameter name="url"
+			value="http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx" />
+		<parameter name="username" value="Tester" />
+		<parameter name="password" value="test" />
+
+		<classes>
+			<class name="com.class05.SmartBearDataProviderParallel" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="TestSauceDemo">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.class05.CrossBrowserDemo" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

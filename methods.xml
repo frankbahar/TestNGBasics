@@ -1,0 +1,11 @@
+<suite name="test">
+	<test name="test">
+		<classes>
+			<class name="com.class03.MethodsExample">
+				<methods>
+					<exclude name="Four" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

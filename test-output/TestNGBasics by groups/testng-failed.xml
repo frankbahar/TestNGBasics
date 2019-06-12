@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNGBasics by groups]">
+  <test thread-count="5" name="GRP-Regression1,Regression2,Smoke1,Smoke2(failed)">
+    <groups>
+      <run>
+        <include name="Regression1"/>
+        <include name="Regression2"/>
+        <include name="Smoke1"/>
+        <include name="Smoke2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.class03.TaskOne">
+        <methods>
+          <include name="userTwo"/>
+          <include name="userOne"/>
+        </methods>
+      </class> <!-- com.class03.TaskOne -->
+    </classes>
+  </test> <!-- GRP-Regression1,Regression2,Smoke1,Smoke2(failed) -->
+</suite> <!-- Failed suite [TestNGBasics by groups] -->

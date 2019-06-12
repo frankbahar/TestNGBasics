@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [New Tour Suite]">
+  <test thread-count="5" name="New Tour Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+        <include name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.class03.NewToursExample">
+        <methods>
+          <include name="mailingInformation"/>
+        </methods>
+      </class> <!-- com.class03.NewToursExample -->
+    </classes>
+  </test> <!-- New Tour Test(failed) -->
+</suite> <!-- Failed suite [New Tour Suite] -->

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="11334" started-at="2019-06-12T15:27:12Z" finished-at="2019-06-12T15:27:23Z">
+    <groups>
+    </groups>
+    <test name="TestSmartBears" duration-ms="10076" started-at="2019-06-12T15:27:12Z" finished-at="2019-06-12T15:27:22Z">
+      <class name="com.class05.SmartBearDataProviderParallel">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.class05.SmartBearDataProviderParallel@2a2d45ba]" name="setUp" is-config="true" duration-ms="6516" started-at="2019-06-12T15:27:12Z" finished-at="2019-06-12T15:27:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tester]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.class05.SmartBearDataProviderParallel@2a2d45ba]" name="validateOrder" duration-ms="1237" started-at="2019-06-12T15:27:18Z" data-provider="orderData" finished-at="2019-06-12T15:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enes Kanter]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12 Main St.]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Portland]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[OR]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[89776]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[MasterCard]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[02/22]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateOrder -->
+        <test-method status="PASS" signature="validateOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.class05.SmartBearDataProviderParallel@2a2d45ba]" name="validateOrder" duration-ms="988" started-at="2019-06-12T15:27:20Z" data-provider="orderData" finished-at="2019-06-12T15:27:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Michael Jordan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12 Main St.]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Chicago]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[IL]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[89776]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Visa]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[09/24]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateOrder -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.class05.SmartBearDataProviderParallel@2a2d45ba]" name="tearDown" is-config="true" duration-ms="1313" started-at="2019-06-12T15:27:21Z" finished-at="2019-06-12T15:27:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.class05.SmartBearDataProviderParallel -->
+    </test> <!-- TestSmartBears -->
+    <test name="TestSauceDemo" duration-ms="11334" started-at="2019-06-12T15:27:12Z" finished-at="2019-06-12T15:27:23Z">
+      <class name="com.class05.CrossBrowserDemo">
+        <test-method status="PASS" signature="testCrossBrowser(java.lang.String)[pri:0, instance:com.class05.CrossBrowserDemo@3532ec19]" name="testCrossBrowser" duration-ms="11312" started-at="2019-06-12T15:27:12Z" finished-at="2019-06-12T15:27:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCrossBrowser -->
+      </class> <!-- com.class05.CrossBrowserDemo -->
+    </test> <!-- TestSauceDemo -->
+  </suite> <!-- Suite -->
+</testng-results>

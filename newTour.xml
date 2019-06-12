@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="New Tour Suite">
+	<test name="New Tour Test">
+		<groups>
+			<run>
+				<include name="Smoke"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.class03.NewToursExample"/>
+		</classes>
+	</test>
+</suite>

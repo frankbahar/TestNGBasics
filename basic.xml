@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Basic Suite">
+	<test name="Basic Test Part-1">
+		<classes>
+			<class name="com.class03.BasicXMLPartOne" />
+			<class name="com.class03.BasicXMLPartTwo" />
+		</classes>
+	</test>
+	<test name="Basic Test Part-2">
+		<classes>
+			<class name="com.class03.BasicXMLPartOne" />
+			<class name="com.class03.BasicXMLPartTwo" />
+		</classes>
+	</test>
+</suite>

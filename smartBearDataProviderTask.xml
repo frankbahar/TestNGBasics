@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="browser" value="chrome" />
+	<parameter name="url"
+		value="http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx"/>
+	<parameter name="username" value="Tester"/>
+	<parameter name="password" value="test"/>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.class05.SmartBearDataProviderTask"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

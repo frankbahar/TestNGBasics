@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<parameter name="userName1" value="Tom" />
+		<parameter name="userName3" value="Jim" />
+		<parameter name="userName2" value="John" />
+		<classes>
+			<class name="com.class04.ParameterExample" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
