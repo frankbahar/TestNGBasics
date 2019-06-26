@@ -22,40 +22,54 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class CommonMethods {
-
 	public static WebDriver driver;
 
 	public static void setUpDriver(String browser, String url) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "src/drivers/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("ie")) {
-			System.setProperty("webdriver.ie.driver", "src/drivers/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "src/test/resources/drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", "src/drivers/MicrosoftWebDriver.exe");
+			System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 		} else {
 			System.out.println("browser given is wrong");
 		}
 		driver.get(url);
 
-		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
-
+	
 	/**
 	 * @author Frank Bahar This method will click the element specified
 	 * @param Select element
 	 */
 	public static void click(WebElement element) {
 		element.click();
+	}
+
+	public static void selectList(WebElement element, String text) {
+		// this is for dropdown which is not using select tag
+		List<WebElement> listLocations = element.findElements(By.tagName("li"));
+
+		for (WebElement li : listLocations) {
+			String liText = li.getAttribute("innerHTML");
+			if (liText.contains(text)) {
+				li.click();
+				break;
+			}
+		}
 	}
 
 	/**
@@ -198,8 +212,6 @@ public class CommonMethods {
 					isElementSelected = true;
 					break;
 				}
-			}else {
-				System.out.println("Options is NOT enabled");
 			}
 		}
 		if (!isElementSelected) {
@@ -219,16 +231,9 @@ public class CommonMethods {
 				if (option.isEnabled()) {
 					String value = option.getAttribute("value");
 					if (value.equals(text)) {
-						if (!option.isSelected()) {
-							option.click();
-							isElementSelected = true;
-							break;
-						}else {
-							System.out.println("Option already selected");
-						}
+						option.click();
+						isElementSelected = true;
 					}
-				}else {
-					System.out.println("Option is NOT enabled");
 				}
 			}
 		}
@@ -246,7 +251,7 @@ public class CommonMethods {
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	/**
 	 * @author Frank Bahar Method that will wait for element to be visible
 	 * 
@@ -261,7 +266,7 @@ public class CommonMethods {
 	 * @author Frank Bahar Method that will wait for element to be clickable
 	 * 
 	 * @param WebElement element, int time
-	 * */
+	 */
 	public static void waitForElementBeClickable(WebElement element, int time) {
 		WebDriverWait wait = new WebDriverWait(driver, time);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -292,7 +297,7 @@ public class CommonMethods {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * @author Frank Bahar This method will scroll down to given pixel
 	 * 
@@ -302,7 +307,7 @@ public class CommonMethods {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0," + pixels + ")");
 	}
-	
+
 	/**
 	 * @author Frank Bahar This method will scroll up to given pixel
 	 * 
@@ -322,19 +327,18 @@ public class CommonMethods {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-	
-	
+
 	/**
 	 * @author Frank Bahar This method will click element by Javascript
 	 * 
-	 * WebElement element
+	 *         WebElement element
 	 */
 	public static void jsClick(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
 
 	}
-	
+
 	/**
 	 * @author Frank Bahar return title of the page by Javascript
 	 * 
@@ -348,7 +352,7 @@ public class CommonMethods {
 	
 	public static void quitDriver() {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (Exception e) {
 			System.out.println("Could not sleep ");
 		}

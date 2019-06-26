@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" name="Suite" parallel="tests">
 	<test name="TestSmartBears">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="url"
 			value="http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx" />
 		<parameter name="username" value="Tester" />
